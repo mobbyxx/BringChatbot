@@ -70,7 +70,7 @@
     {
       "parameters": {
         "toolDescription": "Einkaufsiste abfragen",
-        "url": "http://192.168.12.238:8000/lists/78f1a013-0eb7-4298-a7b3-0da1c06ff1d9/items",
+        "url": "http://192.168.12.238:8000/lists/<list-id>/items",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequestTool",
@@ -86,7 +86,7 @@
       "parameters": {
         "toolDescription": "Items auf die Einkaufsliste setzen",
         "method": "POST",
-        "url": "http://192.168.12.238:8000/lists/78f1a013-0eb7-4298-a7b3-0da1c06ff1d9/items",
+        "url": "http://192.168.12.238:8000/lists/<list-id>/items",
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -115,7 +115,7 @@
       "parameters": {
         "toolDescription": "Setzte Items auf erledigt",
         "method": "POST",
-        "url": "=http://192.168.12.238:8000/lists/78f1a013-0eb7-4298-a7b3-0da1c06ff1d9/items/{{ $fromAI('itemNamewithoutSpecification') }}/complete",
+        "url": "=http://192.168.12.238:8000/lists/<list-id>/items/{{ $fromAI('itemNamewithoutSpecification') }}/complete",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequestTool",
