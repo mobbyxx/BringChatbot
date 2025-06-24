@@ -1,0 +1,6 @@
+aiohttp>=3.8.0
+bring-api>=1.1.0
+mashumaro>=3.11
+orjson>=3.9.0
+fastapi>=0.104.0
+uvicorn>=0.24.0 
